@@ -25,8 +25,7 @@ const fakeCart = [
 ];
 
 function Cart() {
-  // const cart = fakeCart;
-  fakeCart;
+  const cart = fakeCart;
 
   return (
     <div>
