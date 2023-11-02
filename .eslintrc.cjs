@@ -6,7 +6,6 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "react-app",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
@@ -17,7 +16,7 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
+    "no-unused-vars": "warn",
+    "react/prop-types": "off",
   },
 };

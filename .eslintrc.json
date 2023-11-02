@@ -1,7 +1,7 @@
-// {
-//   "extends": "react-app"
-// }
-
 {
-  "extends": ["plugin:react/recommended", "react-app"]
+  "extends": "react-app"
 }
+
+// {
+//   "extends": ["plugin:react/recommended", "react-app"]
+// }
