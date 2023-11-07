@@ -3,6 +3,7 @@ import Button from "../../ui/Button";
 import CartItem from "./CartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart } from "./cartSlice";
+import EmptyCart from "./EmptyCart";
 
 function Cart() {
   const username = useSelector((state) => state.user.username);
@@ -12,6 +13,8 @@ function Cart() {
   function handleClearCart() {
     dispatch(clearCart());
   }
+
+  if (!cart.length) return <EmptyCart />;
 
   return (
     <div className="px-3 py-4">
