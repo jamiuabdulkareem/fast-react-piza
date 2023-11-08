@@ -1,7 +1,7 @@
 import Button from "../../ui/Button";
 
-function deleteItem() {
+function DeleteItem() {
   return <Button type="small">Delete</Button>;
 }
 
-export default deleteItem;
+export default DeleteItem;
