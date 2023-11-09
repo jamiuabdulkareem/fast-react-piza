@@ -10,6 +10,7 @@ function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id));
+  const isInCart = currentQuantity > 0;
 
   function handleAddToCard() {
     const newItem = {
@@ -44,9 +45,9 @@ function MenuItem({ pizza }) {
             </p>
           )}
 
-          <DeleteItem pizzaId={id} />
+          {isInCart && <DeleteItem pizzaId={id} />}
 
-          {!soldOut && (
+          {!soldOut && !isInCart && (
             <Button type="small" onClick={handleAddToCard}>
               Add to cart
             </Button>
